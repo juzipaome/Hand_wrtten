@@ -65,7 +65,7 @@ class FlattenLayer(torch.nn.Module):
 def get_net():
     # 构建网络
     # ResNet模型
-    model_path = r"F:\PyCharm\Practice\hand_wrtten\logs\Epoch100-Loss0.0000-train_acc1.0000-test_acc0.9930.pth"
+    model_path = r"logs\Epoch100-Loss0.0000-train_acc1.0000-test_acc0.9930.pth"
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     net = nn.Sequential(
         nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3),

@@ -10,7 +10,7 @@ import predict as pt
 from time import time
 from Pre_treatment import softmax
 net = pt.get_net()
-orig_path = r"F:\PyCharm\Practice\hand_wrtten\real_img_resize"
+orig_path = r"real_img_resize"
 img_list = os.listdir(orig_path)
 
 # img_path = r'F:\PyCharm\Practice\hand_wrtten\real_img\7.jpg'

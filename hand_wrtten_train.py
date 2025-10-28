@@ -15,14 +15,14 @@ import time
 from tqdm import tqdm
 
 # 训练集文件
-train_images_idx3_ubyte_file = 'F:/PyCharm/Practice/hand_wrtten/dataset/train-images.idx3-ubyte'
+train_images_idx3_ubyte_file = 'dataset\train-images-idx3-ubyte'
 # 训练集标签文件
-train_labels_idx1_ubyte_file = 'F:/PyCharm/Practice/hand_wrtten/dataset/train-labels.idx1-ubyte'
+train_labels_idx1_ubyte_file = 'dataset\train-labels.idx1-ubyte'
 
 # 测试集文件
-test_images_idx3_ubyte_file = 'F:/PyCharm/Practice/hand_wrtten/dataset/t10k-images.idx3-ubyte'
+test_images_idx3_ubyte_file = 'dataset\t10k-images.idx3-ubyte'
 # 测试集标签文件
-test_labels_idx1_ubyte_file = 'F:/PyCharm/Practice/hand_wrtten/dataset/t10k-labels.idx1-ubyte'
+test_labels_idx1_ubyte_file = 'dataset\t10k-labels.idx1-ubyte'
 
 
 # 读取数据部分
