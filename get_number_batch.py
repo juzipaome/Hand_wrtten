@@ -105,7 +105,7 @@ if __name__ == '__main__':
     print("模型加载完毕。")
 
     # 2. 指定您手写图片的路径
-    orig_path = r"real_img" 
+    orig_path = r"test" 
     
     if not os.path.exists(orig_path):
         print(f"错误: 找不到路径 {orig_path}")
