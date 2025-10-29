@@ -65,7 +65,7 @@ class FlattenLayer(torch.nn.Module):
 def get_net():
     # 构建网络
     # ResNet模型
-    model_path = r"logs\Epoch100-Loss0.0000-train_acc1.0000-test_acc0.9930.pth"
+    model_path = r"logs\Epoch100-Loss0.0096-train_acc0.9969-test_acc0.9920.pth"
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     net = nn.Sequential(
         nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3),
@@ -97,12 +97,18 @@ def get_net():
 
 
 def predict(img, net):
+    """
+    img: 传入的应该是预处理后 28x28 的 Numpy 数组，像素值范围 [0, 255]
+    """
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    img_in = torch.from_numpy(img)
+    # 归一化: 将输入图像从 [0, 255] 缩放到 [0, 1]
+    img_normalized = img.astype(np.float32) / 255.0
+    
+    img_in = torch.from_numpy(img_normalized) # 使用归一化后的图像
     img_in = torch.unsqueeze(img_in, 0)
     img_in = torch.unsqueeze(img_in, 0).to(device)
-    img_in = img_in.float()
+    # img_in = img_in.float() # .astype(np.float32) 已经使其成为 float
     result_org = net(img_in)
     return result_org
 
