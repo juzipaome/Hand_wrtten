@@ -2,7 +2,7 @@
 # date:  2020/11/5
 # E-mail:hurri_cane@qq.com
 #
-
+# 版本更新：将预测结果显示在原始图片上
 
 import cv2 as cv
 import numpy as np
@@ -37,18 +37,18 @@ def process_real_image_for_mnist(img_path):
     #    cv.THRESH_BINARY_INV: 反转阈值，因为我们是浅色背景、深色数字 -> 变为黑底白字
     #    blockSize (11): 计算阈值的邻域大小（必须是奇数）
     #    C (2): 从均值或加权均值中减去的一个常数，用于微调
+    #    (使用您在文件中调整后的参数)
     img_thresh = cv.adaptiveThreshold(
         img_blur, 
         255, 
         cv.ADAPTIVE_THRESH_GAUSSIAN_C, 
         cv.THRESH_BINARY_INV, 
-        17, 
+        21, 
         5
     )
     
     # 4. (可选但推荐) 形态学操作
-    #    自适应阈值可能会产生一些小的噪点。
-    #    使用“闭运算”(MORPH_CLOSE) 可以填充数字内部的小黑洞，使轮廓更完整。
+    #    (使用您在文件中调整后的参数)
     kernel = np.ones((3, 3), np.uint8)
     img_cleaned = cv.morphologyEx(img_thresh, cv.MORPH_CLOSE, kernel, iterations=3)
     
@@ -96,7 +96,7 @@ def process_real_image_for_mnist(img_path):
 
     return canvas
 
-# --- 主程序开始 (这部分和之前一样) ---
+# --- 主程序开始 ---
 if __name__ == '__main__':
     
     # 1. 加载您训练好的模型
@@ -105,7 +105,6 @@ if __name__ == '__main__':
     print("模型加载完毕。")
 
     # 2. 指定您手写图片的路径
-
     orig_path = r"real_img" 
     
     if not os.path.exists(orig_path):
@@ -131,12 +130,34 @@ if __name__ == '__main__':
                 
                 print(f"图片: {img_name}, 预测结果: {predicted_label}")
 
-                # 显示处理后的 28x28 图像，看它是否接近 MNIST
+                # --- 关键修改：将结果绘制到图片上 ---
+                
+                # 读取原始图像用于显示
+                orig_display = cv.imread(img_path)
+                # 缩放图像以便显示
+                orig_resized = cv.resize(orig_display, (300, 300))
+                
+                # 准备要绘制的文本
+                text = f"Prediction: {predicted_label}"
+                
+                # 设置文本参数
+                font = cv.FONT_HERSHEY_SIMPLEX
+                font_scale = 1
+                color = (0, 0, 255) # 红色 (BGR)
+                thickness = 2
+                position = (10, 30) # 左上角坐标 (x, y)
+                
+                # 将文本绘制到缩放后的图像上
+                cv.putText(orig_resized, text, position, font, font_scale, color, thickness)
+                
+                # 显示处理后的 28x28 图像 (用于调试)
                 cv.imshow("Processed 28x28 (Target for MNIST)", cv.resize(processed_img, (300, 300), interpolation=cv.INTER_NEAREST))
                 
-                orig_display = cv.imread(img_path)
-                cv.imshow("Original Image", cv.resize(orig_display, (300, 300)))
+                # 显示带有预测结果的原始图像
+                cv.imshow("Original Image with Prediction", orig_resized)
                 
+                # --- 修改结束 ---
+
                 print("按任意键查看下一张...")
                 cv.waitKey(0)
 
