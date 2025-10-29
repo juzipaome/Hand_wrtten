@@ -16,7 +16,7 @@ capture = cv.VideoCapture(0,cv.CAP_DSHOW)
 capture.set(3, 1920)
 capture.set(4, 1080)
 net = pt.get_net()
-
+#test
 # img_path = r'F:\PyCharm\Practice\hand_wrtten\real_img\7.jpg'
 while (True):
     ret, frame = capture.read()
