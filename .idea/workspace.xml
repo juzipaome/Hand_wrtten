@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b08f1e1c-5c95-49ce-b001-586f2b5e1a2f" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_number_batch.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_number_batch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/juzipaome/Hand_wrtten.git&quot;,
-    &quot;accountId&quot;: &quot;6e180c6d-a531-4e38-9b1a-af7a5e698bd1&quot;
+    &quot;accountId&quot;: &quot;10b24d82-92a6-46b1-9af3-5627bcb7acd3&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -41,13 +43,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.get_number_batch.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/File/Projects/Hand_wrtten",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -59,9 +67,32 @@
     </attachedChunks>
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="b08f1e1c-5c95-49ce-b001-586f2b5e1a2f" name="更改" comment="" />
+      <created>1761721035090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761721035090</updated>
+      <workItem from="1761721036857" duration="277000" />
+      <workItem from="1761721323666" duration="19000" />
+      <workItem from="1761721358143" duration="25000" />
+      <workItem from="1761721414092" duration="15000" />
+      <workItem from="1761721437235" duration="20000" />
+      <workItem from="1761721470074" duration="22000" />
+      <workItem from="1761721522995" duration="57000" />
+      <workItem from="1761721590530" duration="57000" />
+      <workItem from="1761721655683" duration="12000" />
+      <workItem from="1761721800855" duration="36000" />
+      <workItem from="1761721856258" duration="22000" />
+      <workItem from="1761721944892" duration="44000" />
+      <workItem from="1761722379089" duration="1500000" />
+    </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Hand_wrtten$get_number_batch.coverage" NAME="get_number_batch 覆盖结果" MODIFIED="1761722748277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

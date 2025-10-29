@@ -88,7 +88,7 @@ def get_net():
 
     # 加载网络模型
     print("Load weight into state dict...")
-    stat_dict = torch.load(model_path, map_location=device)
+    stat_dict = torch.load(model_path, map_location=device,weights_only=True)
     net.load_state_dict(stat_dict)
     net.to(device)
     net.eval()
