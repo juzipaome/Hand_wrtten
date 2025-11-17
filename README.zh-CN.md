@@ -2,6 +2,8 @@
 
 [![English](https://img.shields.io/badge/English-README.md-blue)](README.md)
 
+感谢原作者的代码文件支持。
+
 基于PyTorch和ResNet架构的实时手写数字识别系统，在MNIST数据集上达到99.2%的测试准确率。
 
 ## 🎯 项目概述
