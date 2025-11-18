@@ -1,6 +1,6 @@
 # Handwritten Digit Recognition System
 
-[![中文](https://img.shields.io/badge/中文-README--zh--CN.md-red)](README.zh-CN.md)
+[简体中文](README.zh-CN.md)
 
 A real-time handwritten digit recognition system using PyTorch and ResNet architecture, achieving 99.2% test accuracy on the MNIST dataset.
 

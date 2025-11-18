@@ -1,6 +1,6 @@
 # 手写数字识别系统
 
-[![English](https://img.shields.io/badge/English-README.md-blue)](README.md)
+[英文版本](README.md)
 
 基于PyTorch和ResNet架构的实时手写数字识别系统，在MNIST数据集上达到99.2%的测试准确率。
 
