@@ -2,6 +2,8 @@
 
 [简体中文](README.zh-CN.md)
 
+Thanks to the original author for the support of the code files.
+
 A real-time handwritten digit recognition system using PyTorch and ResNet architecture, achieving 99.2% test accuracy on the MNIST dataset.
 
 ## 🎯 Project Overview
