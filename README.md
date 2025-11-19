@@ -1,6 +1,6 @@
 # Handwritten Digit Recognition System
 
-[简体中文](README.zh-CN.md)
+English | [简体中文](README.zh-CN.md)
 
 Thanks to the original author for the support of the code files.
 
@@ -197,6 +197,6 @@ This project is open source and available under the MIT License.
 - OpenCV contributors
 
 
----
+----
 
 **Languages:** [![English](https://img.shields.io/badge/English-Current-blue)](README.md) [![中文](https://img.shields.io/badge/中文-README--zh--CN.md-red)](README.zh-CN.md)
